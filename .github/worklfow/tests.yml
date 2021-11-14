@@ -1,6 +1,6 @@
 name: CI
 
-on: [ PUSH ]
+on: [ push ]
 
 jobs:
   test:
@@ -10,7 +10,7 @@ jobs:
       - name: Set up JDK 16
         uses: actions/setup-java@v2
         with:
-          distrubtion: "adopt"
+          distribution: "adopt"
           java-version: 16
       - name: clean build
         run: ./gradlew clean test --info --stacktrace
