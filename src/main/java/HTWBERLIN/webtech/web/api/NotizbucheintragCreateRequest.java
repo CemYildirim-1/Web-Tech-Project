@@ -7,6 +7,7 @@ public class NotizbucheintragCreateRequest {
     private String ldt;
     private String entry;
 
+    public NotizbucheintragCreateRequest() {}
     public NotizbucheintragCreateRequest(String ldt, String entry) {
         this.ldt = ldt;
         this.entry = entry;

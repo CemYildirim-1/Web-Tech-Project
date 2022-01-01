@@ -71,6 +71,9 @@ public class NotizbucheintragService {
         return true;
     }
 
+
+
+    
     public Notizbucheintrag transformEntity(NotizbucheintragEntity entity) {
         return new Notizbucheintrag(
                 entity.getId(),
