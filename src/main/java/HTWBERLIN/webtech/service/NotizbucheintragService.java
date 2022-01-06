@@ -47,6 +47,7 @@ public class NotizbucheintragService {
 
         notizbucheintragEntity.setLdt(request.getLdt());
         notizbucheintragEntity.setEntry(request.getEntry());
+        notizbucheintragEntity.setColour(request.getEntry());
 
         notizbucheintragEntity= notizenRepository.save(notizbucheintragEntity);
 
@@ -56,7 +57,7 @@ public class NotizbucheintragService {
     }
     public Notizbucheintrag create(NotizbucheintragCreateRequest request) {
 
-        var notizbucheintragEntity = new NotizbucheintragEntity(request.getLdt(), request.getEntry());
+        var notizbucheintragEntity = new NotizbucheintragEntity(request.getLdt(), request.getEntry(), request.getColour());
         notizenRepository.save(notizbucheintragEntity);
         return transformEntity(notizbucheintragEntity);
     }
@@ -78,7 +79,8 @@ public class NotizbucheintragService {
         return new Notizbucheintrag(
                 entity.getId(),
                 entity.getLdt(),
-                entity.getEntry()
+                entity.getEntry(),
+                entity.getColour()
         );
 
     }

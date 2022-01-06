@@ -6,11 +6,21 @@ public class NotizbucheintragCreateRequest {
 
     private String ldt;
     private String entry;
+    private String colour;
 
     public NotizbucheintragCreateRequest() {}
-    public NotizbucheintragCreateRequest(String ldt, String entry) {
+    public NotizbucheintragCreateRequest(String ldt, String entry, String colour) {
         this.ldt = ldt;
         this.entry = entry;
+        this.colour = colour;
+    }
+
+    public String getColour() {
+        return colour;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     public String getLdt() {

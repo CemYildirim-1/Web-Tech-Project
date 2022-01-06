@@ -12,11 +12,21 @@ public class Notizbucheintrag {
     private Long id;
     private String ldt;
     private String entry;
+    private String colour;
 
-    public Notizbucheintrag(Long id,String ldt, String entry) {
+    public Notizbucheintrag(Long id,String ldt, String entry, String colour) {
         this.id = id;
         this.ldt = ldt;
         this.entry = entry;
+        this.colour = colour;
+    }
+
+    public String getColour() {
+        return colour;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     public Long getId() {

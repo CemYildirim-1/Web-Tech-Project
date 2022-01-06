@@ -16,14 +16,25 @@ public class NotizbucheintragEntity {
     @Column(name = "Eintrag",nullable = false)
     private String entry;
 
-    public NotizbucheintragEntity(String ldt, String entry) {
+    @Column(name= "Farbe", nullable = false)
+    private String colour;
+    public NotizbucheintragEntity(String ldt, String entry, String colour) {
         this.ldt = ldt;
         this.entry = entry;
+        this.colour = colour;
     }
-
     public NotizbucheintragEntity() {
 
     }
+
+    public String getColour() {
+        return colour;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
 
     public Long getId() {
         return id;
