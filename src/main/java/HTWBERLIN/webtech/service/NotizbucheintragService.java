@@ -1,9 +1,10 @@
-package htwberlin.webtech.service;
+package HTWBERLIN.webtech.service;
 
-import htwberlin.webtech.persistence.NotizbucheintragEntity;
-import htwberlin.webtech.persistence.NotizenRepository;
-import htwberlin.webtech.web.api.Notizbucheintrag;
-import htwberlin.webtech.web.api.NotizbucheintragCreateRequest;
+import HTWBERLIN.webtech.persistence.Colour;
+import HTWBERLIN.webtech.persistence.NotizenRepository;
+import HTWBERLIN.webtech.web.api.Notizbucheintrag;
+import HTWBERLIN.webtech.persistence.NotizbucheintragEntity;
+import HTWBERLIN.webtech.web.api.NotizbucheintragCreateRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,11 +14,13 @@ import java.util.stream.Collectors;
 public class NotizbucheintragService {
 
 
+
     private final NotizenRepository notizenRepository;
 
     public NotizbucheintragService(NotizenRepository notizenRepository) {
         this.notizenRepository = notizenRepository;
     }
+
 
 
     public List<Notizbucheintrag> findAll() {
@@ -47,7 +50,8 @@ public class NotizbucheintragService {
 
         notizbucheintragEntity.setLdt(request.getLdt());
         notizbucheintragEntity.setEntry(request.getEntry());
-        notizbucheintragEntity.setColour(request.getEntry());
+     //   notizbucheintragEntity.setColour(Colour.valueOf(request.getColour()));
+        notizbucheintragEntity.setColour(request.getColour());
 
         notizbucheintragEntity= notizenRepository.save(notizbucheintragEntity);
 
@@ -56,7 +60,7 @@ public class NotizbucheintragService {
 
     }
     public Notizbucheintrag create(NotizbucheintragCreateRequest request) {
-
+        //var colour = Colour.valueOf(request.getColour());
         var notizbucheintragEntity = new NotizbucheintragEntity(request.getLdt(), request.getEntry(), request.getColour());
         notizenRepository.save(notizbucheintragEntity);
         return transformEntity(notizbucheintragEntity);
@@ -74,8 +78,9 @@ public class NotizbucheintragService {
 
 
 
-    
+
     public Notizbucheintrag transformEntity(NotizbucheintragEntity entity) {
+        //var colour = entity.getColour() != null ? entity.getColour().name() : Colour.unknown.name();
         return new Notizbucheintrag(
                 entity.getId(),
                 entity.getLdt(),

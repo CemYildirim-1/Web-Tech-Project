@@ -1,10 +1,9 @@
-package htwberlin.webtech.web;
+package HTWBERLIN.webtech.web;
 
 
-import htwberlin.webtech.service.NotizbucheintragService;
-import htwberlin.webtech.web.api.Notizbucheintrag;
-import htwberlin.webtech.web.api.NotizbucheintragCreateRequest;
-import org.springframework.boot.autoconfigure.data.mongo.ReactiveStreamsMongoClientDependsOnBeanFactoryPostProcessor;
+import HTWBERLIN.webtech.service.NotizbucheintragService;
+import HTWBERLIN.webtech.web.api.Notizbucheintrag;
+import HTWBERLIN.webtech.web.api.NotizbucheintragCreateRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

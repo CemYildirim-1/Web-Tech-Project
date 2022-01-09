@@ -1,4 +1,4 @@
-package htwberlin.webtech.persistence;
+package HTWBERLIN.webtech.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

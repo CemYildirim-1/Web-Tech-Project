@@ -1,4 +1,4 @@
-package htwberlin.webtech.persistence;
+package HTWBERLIN.webtech.persistence;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -16,8 +16,9 @@ public class NotizbucheintragEntity {
     @Column(name = "Eintrag",nullable = false)
     private String entry;
 
-    @Column(name= "Farbe", nullable = false)
+    @Column(name= "Farbe")
     private String colour;
+
     public NotizbucheintragEntity(String ldt, String entry, String colour) {
         this.ldt = ldt;
         this.entry = entry;
