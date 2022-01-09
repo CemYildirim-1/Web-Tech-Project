@@ -1,4 +1,4 @@
-package htwberlin.webtech;
+package HTWBERLIN.webtech;
 
 import HTWBERLIN.webtech.service.NotizbucheintragService;
 import HTWBERLIN.webtech.web.api.Notizbucheintrag;
